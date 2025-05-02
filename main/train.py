@@ -138,8 +138,9 @@ def train(config, dataloader):
                     max_acc = acc
                     if not os.path.exists('Models'):
                         os.mkdir('Models')
-                    torch.save(net.state_dict(), f'Models/best_checkpoint.pth')
-                    print('saved')
+                    model_path = f'Models/{config.chosen_model}_best.pth'
+                    torch.save(net.state_dict(), model_path)
+                    print(f"✔ Saved model to {model_path}")
             print('%s ACC:%.4f' % (phase, acc))
 
 
@@ -148,7 +149,8 @@ def train(config, dataloader):
 
 def inference(config, dataloader):
     net = select_model(config.chosen_model)
-    state_dict = torch.load('Models/best_checkpoint.pth')
+    model_path = f'Models/{config.chosen_model}_best.pth'
+    state_dict = torch.load(model_path)
     net.load_state_dict(state_dict)
     y_list, y_predict_list = [], []
     if use_gpu:
