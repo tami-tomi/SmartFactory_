@@ -77,7 +77,7 @@ def preprocess(d_path, noise=False, snr=0):
 
 
 if __name__ == "__main__":
-    path = '../data/0HP' # change dataset file folders to split data
+    path = 'data/0HP' # change dataset file folders to split data
     preprocess(d_path=path,
                 noise=True,
                 snr=0)
