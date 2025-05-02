@@ -77,7 +77,7 @@ if __name__ == '__main__':
     random_seed(42)
     model_name = 'qcnn'
     model = QCNN()
-    run_path = 'wandb/qcnnhit6/checkpoint.pth' # Need to be specified as the path to the model file
+    run_path = 'Models/qcnn_best.pth' # Need to be specified as the path to the model file
     best_model_dict = torch.load(run_path, map_location=torch.device('cpu'))
     model.load_state_dict(best_model_dict)
     model.eval()
