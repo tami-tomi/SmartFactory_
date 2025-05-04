@@ -97,16 +97,16 @@ if __name__ == '__main__':
                              )
 
     # the raw dataset without noise
-    # test_X1, test_Y1 = prepro(d_path=path,
-    #                          length=length,
-    #                          number=100,
-    #                          normal=False,
-    #                          enc=True,
-    #                          enc_step=28,
-    #                          snr=SNR,
-    #                          property='Test',
-    #                          noise=False
-    #                          )
+    test_X1, test_Y1 = prepro(d_path=path,
+                              length=length,
+                              number=100,
+                              normal=False,
+                              enc=True,
+                              enc_step=28,
+                              snr=SNR,
+                              property='Test',
+                              noise=False
+                              )
 
     test_X = test_X[:, np.newaxis, :]
 
@@ -302,30 +302,30 @@ if __name__ == '__main__':
     pd_8.to_csv('data/input/input_%s_snr_%d_class_8.csv' % (chosen_data, SNR), header=False, )
     pd_9.to_csv('data/input/input_%s_snr_%d_class_9.csv' % (chosen_data, SNR), header=False, )
 
-    # input2 = {}
-    # for j in range(10):
-    #     idx = np.argwhere(test_Y == j)
-    #     temp = test_X1[idx[0, 0]: idx[-1, 0] + 1].ravel()
-    #     input2[j] = temp
+    input2 = {}
+    for j in range(10):
+        idx = np.argwhere(test_Y == j)
+        temp = test_X1[idx[0, 0]: idx[-1, 0] + 1].ravel()
+        input2[j] = temp
     #
-    # pd_0 = pd.DataFrame(input2[0])
-    # pd_1 = pd.DataFrame(input2[1])
-    # pd_2 = pd.DataFrame(input2[2])
-    # pd_3 = pd.DataFrame(input2[3])
-    # pd_4 = pd.DataFrame(input2[4])
-    # pd_5 = pd.DataFrame(input2[5])
-    # pd_6 = pd.DataFrame(input2[6])
-    # pd_7 = pd.DataFrame(input2[7])
-    # pd_8 = pd.DataFrame(input2[8])
-    # pd_9 = pd.DataFrame(input2[9])
+    pd_0 = pd.DataFrame(input2[0])
+    pd_1 = pd.DataFrame(input2[1])
+    pd_2 = pd.DataFrame(input2[2])
+    pd_3 = pd.DataFrame(input2[3])
+    pd_4 = pd.DataFrame(input2[4])
+    pd_5 = pd.DataFrame(input2[5])
+    pd_6 = pd.DataFrame(input2[6])
+    pd_7 = pd.DataFrame(input2[7])
+    pd_8 = pd.DataFrame(input2[8])
+    pd_9 = pd.DataFrame(input2[9])
     #
-    # pd_0.to_csv('data/input/rawinput_%s_snr_%d_class_0.csv' % (chosen_data, SNR), header=False)
-    # pd_1.to_csv('data/input/rawinput_%s_snr_%d_class_1.csv' % (chosen_data, SNR), header=False, )
-    # pd_2.to_csv('data/input/rawinput_%s_snr_%d_class_2.csv' % (chosen_data, SNR), header=False, )
-    # pd_3.to_csv('data/input/rawinput_%s_snr_%d_class_3.csv' % (chosen_data, SNR), header=False, )
-    # pd_4.to_csv('data/input/rawinput_%s_snr_%d_class_4.csv' % (chosen_data, SNR), header=False, )
-    # pd_5.to_csv('data/input/rawinput_%s_snr_%d_class_5.csv' % (chosen_data, SNR), header=False, )
-    # pd_6.to_csv('data/input/rawinput_%s_snr_%d_class_6.csv' % (chosen_data, SNR), header=False, )
-    # pd_7.to_csv('data/input/rawinput_%s_snr_%d_class_7.csv' % (chosen_data, SNR), header=False, )
-    # pd_8.to_csv('data/input/rawinput_%s_snr_%d_class_8.csv' % (chosen_data, SNR), header=False, )
-    # pd_9.to_csv('data/input/rawinput_%s_snr_%d_class_9.csv' % (chosen_data, SNR), header=False, )
+    pd_0.to_csv('data/input/rawinput_%s_snr_%d_class_0.csv' % (chosen_data, SNR), header=False)
+    pd_1.to_csv('data/input/rawinput_%s_snr_%d_class_1.csv' % (chosen_data, SNR), header=False, )
+    pd_2.to_csv('data/input/rawinput_%s_snr_%d_class_2.csv' % (chosen_data, SNR), header=False, )
+    pd_3.to_csv('data/input/rawinput_%s_snr_%d_class_3.csv' % (chosen_data, SNR), header=False, )
+    pd_4.to_csv('data/input/rawinput_%s_snr_%d_class_4.csv' % (chosen_data, SNR), header=False, )
+    pd_5.to_csv('data/input/rawinput_%s_snr_%d_class_5.csv' % (chosen_data, SNR), header=False, )
+    pd_6.to_csv('data/input/rawinput_%s_snr_%d_class_6.csv' % (chosen_data, SNR), header=False, )
+    pd_7.to_csv('data/input/rawinput_%s_snr_%d_class_7.csv' % (chosen_data, SNR), header=False, )
+    pd_8.to_csv('data/input/rawinput_%s_snr_%d_class_8.csv' % (chosen_data, SNR), header=False, )
+    pd_9.to_csv('data/input/rawinput_%s_snr_%d_class_9.csv' % (chosen_data, SNR), header=False, )
